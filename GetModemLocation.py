@@ -10,7 +10,6 @@ def getLocationFromGoogle(cellId, locationAreaCode, mobileCountryCode, mobileNet
 	url = "https://www.googleapis.com/geolocation/v1/geolocate?key=" + GOOGLE_KEY
 	r = requests.post(url,data=jsonPayload,headers=headers)
 	r.raise_for_status()
-	log.info(r)
 	response = json.loads(r.text)
 	lat = response['location']['lat']
 	lng = response['location']['lng']
@@ -47,7 +46,7 @@ cid = getCellId()
 
 lat, lng = getLocationFromGoogle(cid, lac, mcc, mnc)
 
-print("Latitud: %s, Longitud: %s", lat, lng)
+print("Latitud: %s Longitud: %s" %(lat,lng))
 
 
 
