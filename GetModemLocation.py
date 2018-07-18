@@ -46,7 +46,7 @@ cid = getCellId()
 
 lat, lng = getLocationFromGoogle(cid, lac, mcc, mnc)
 
-print("Latitud: %s Longitud: %s" %(lat,lng))
+print("Latitude: %s Longitude: %s" %(lat,lng))
 
 
 
